@@ -43,7 +43,7 @@ php artisan key:generate
 # Rode as migrations (opcionalmente com seeders)
 php artisan migrate --seed
 
-# (Se usar frontend com Vite)
+#frontend com Vite
 npm install
 npm run dev
 
