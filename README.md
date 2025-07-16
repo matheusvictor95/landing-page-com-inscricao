@@ -24,7 +24,7 @@ Antes de começar, você vai precisar ter instalado:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/nome-do-repo.git
+git clone https://github.com/seu-usuario/nome-do-repo.git](https://github.com/matheusvictor95/landing-page-com-inscricao.git
 
 # Acesse o diretório do projeto
 cd nome-do-repo
