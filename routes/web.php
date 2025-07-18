@@ -37,5 +37,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/inscricao', [InscricaoController::class, 'index'])->name('inscricao.index');
+Route::get('/inscricao/create', [InscricaoController::class, 'create'])->name('inscricao.create');
+Route::get('/inscricao/{id}', [InscricaoController::class, 'show'])->name('inscricao.show');
 
 require __DIR__.'/auth.php';

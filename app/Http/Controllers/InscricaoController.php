@@ -13,50 +13,27 @@ use Inertia\Response;
 
 class InscricaoController extends Controller
 {
-    /**
-     * Display the user's profile form.
-     */
+    
     public function index(): Response
     {
+        
         return Inertia::render('Inscricao/index', [
             
         ]);
     }
 
-    /**
-     * Update the user's profile information.
-     */
-    public function update(ProfileUpdateRequest $request): RedirectResponse
+    
+    public function create(): Response
     {
-        $request->user()->fill($request->validated());
-
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
-        }
-
-        $request->user()->save();
-
-        return Redirect::route('profile.edit');
+      
+        return Inertia::render('inscricao.create');
     }
 
-    /**
-     * Delete the user's account.
-     */
-    public function destroy(Request $request): RedirectResponse
+  
+    public function show($id): Response
     {
-        $request->validate([
-            'password' => ['required', 'current-password'],
-        ]);
-
-        $user = $request->user();
-
-        Auth::logout();
-
-        $user->delete();
-
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-
-        return Redirect::to('/');
+     return Inertia::render('Inscricao/show', [
+        'inscricao' => $id
+     ]);
     }
 }

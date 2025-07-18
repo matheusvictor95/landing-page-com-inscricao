@@ -1,9 +1,9 @@
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
+import AuthenticatedLayout from '@/Layouts/InscricaoLayout';
 import { Head } from '@inertiajs/react';
 
 export default function Inscricao(props) {
     return (
-        <AuthenticatedLayout
+        <InscricaoLayout
             auth={props.auth}
             errors={props.errors}
             header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Inscrições</h2>}
@@ -17,6 +17,6 @@ export default function Inscricao(props) {
                     </div>
                 </div>
             </div>
-        </AuthenticatedLayout>
+        </InscricaoLayout>
     );
 }

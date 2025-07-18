@@ -7,7 +7,9 @@
   "dependencies": {
     "@inertiajs/react": "^1.0.0",
     "axios": "^0.27",
+    "bootstrap": "^5.3.7",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.10",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
@@ -23,4 +25,3 @@
     "vite": "^4.5.0"
   }
 }
-

@@ -7,7 +7,7 @@ Um projeto simples de uma landing page com um formulário de inscrição
 - PHP ^8.0
 - Laravel 9
 - Composer
-- MySQL / PostgreSQL (ou outro banco)
+- MySQL / PostgreSQL (Você pode escolher o banco que quiser, eu usei o PostgreSQL)
 - Node.js & NPM (opcional, para frontend com Vite)
 
 ## 🚀 Requisitos
