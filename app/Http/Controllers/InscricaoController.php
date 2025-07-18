@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Models\Inscricao;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -14,23 +15,23 @@ use Inertia\Response;
 class InscricaoController extends Controller
 {
     
-    public function index(): Response
+    public function index()
     {
-        
-        return Inertia::render('Inscricao/index', [
-            
+        $inscricoes = Inscricao::all();
+        return Inertia::render('Inscricao/Index',[
+            'inscricoes' => $inscricoes,
         ]);
     }
 
     
-    public function create(): Response
+    public function create()
     {
-      
-        return Inertia::render('inscricao.create');
+     
+        return Inertia::render('Inscricao/create');
     }
 
   
-    public function show($id): Response
+    public function show($id)
     {
      return Inertia::render('Inscricao/show', [
         'inscricao' => $id
